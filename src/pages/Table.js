@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 
-export default function home({ navigation }) {
+export default function table({ navigation }) {
 
   const [isModalVisible, setModalVisible] = useState(false);
   const [quant, setQuant] = useState();
@@ -27,14 +27,14 @@ export default function home({ navigation }) {
     { id: "05", number: "6" },
     { id: "06", number: "7" },
     { id: "07", number: "8" },
-    { id: "00", number: "9" },
-    { id: "01", number: "10" },
-    { id: "02", number: "11" },
-    { id: "03", number: "12" },
-    { id: "04", number: "13" },
-    { id: "05", number: "14" },
-    { id: "06", number: "15" },
-    { id: "07", number: "16" },
+    { id: "08", number: "9" },
+    { id: "09", number: "10" },
+    { id: "10", number: "11" },
+    { id: "11", number: "12" },
+    { id: "12", number: "13" },
+    { id: "13", number: "14" },
+    { id: "14", number: "15" },
+    { id: "15", number: "16" },
   ]
 
   return (
@@ -57,7 +57,6 @@ export default function home({ navigation }) {
             padding: 30,
           }}>
 
-
             <TextInput
               style={styles.input}
               onChangeText={text => setQuant(text)}
@@ -72,7 +71,6 @@ export default function home({ navigation }) {
               value={obs}
               placeholder="Observações"
             />
-            
 
             <TouchableOpacity
               style={styles.buttonEnd}
@@ -90,7 +88,6 @@ export default function home({ navigation }) {
           </View>
         </View>
       </Modal>
-
 
       <View style={styles.background}>
 
@@ -114,7 +111,7 @@ export default function home({ navigation }) {
               flex: 1,
             }}>
               <Text style={styles.name}>Nome do produto</Text>
-              <Text style={styles.priceProduct}>R$ 00,00</Text>
+              <Text style={styles.priceProduct}>R$ 0,00</Text>
             </View>
             <View>
               <TouchableOpacity
@@ -124,106 +121,18 @@ export default function home({ navigation }) {
                 <Text style={styles.buttonText}>+</Text>
               </TouchableOpacity>
             </View>
-
           </View>
-          <View style={styles.card}>
-            <View style={{
-              flex: 1,
-            }}>
-              <Text style={styles.name}>Nome do produto</Text>
-              <Text style={styles.priceProduct}>R$ 00,00</Text>
-            </View>
-            <View>
-              <TouchableOpacity
-                style={styles.button}
-              >
-                <Text style={styles.buttonText}>+</Text>
-              </TouchableOpacity>
-            </View>
-
-          </View>
-          <View style={styles.card}>
-            <View style={{
-              flex: 1,
-            }}>
-              <Text style={styles.name}>Nome do produto</Text>
-              <Text style={styles.priceProduct}>R$ 00,00</Text>
-            </View>
-            <View>
-              <TouchableOpacity
-                style={styles.button}
-              >
-                <Text style={styles.buttonText}>+</Text>
-              </TouchableOpacity>
-            </View>
-
-          </View>
-          <View style={styles.card}>
-            <View style={{
-              flex: 1,
-            }}>
-              <Text style={styles.name}>Nome do produto</Text>
-              <Text style={styles.priceProduct}>R$ 00,00</Text>
-            </View>
-            <View>
-              <TouchableOpacity
-                style={styles.button}
-              >
-                <Text style={styles.buttonText}>+</Text>
-              </TouchableOpacity>
-            </View>
-
-          </View>
-          <View style={styles.card}>
-            <View style={{
-              flex: 1,
-            }}>
-              <Text style={styles.name}>Nome do produto</Text>
-              <Text style={styles.priceProduct}>R$ 00,00</Text>
-            </View>
-            <View>
-              <TouchableOpacity
-                style={styles.button}
-              >
-                <Text style={styles.buttonText}>+</Text>
-              </TouchableOpacity>
-            </View>
-
-          </View>
-          <View style={styles.card}>
-            <View style={{
-              flex: 1,
-            }}>
-              <Text style={styles.name}>Nome do produto</Text>
-              <Text style={styles.priceProduct}>R$ 00,00</Text>
-            </View>
-            <View>
-              <TouchableOpacity
-                style={styles.button}
-              >
-                <Text style={styles.buttonText}>+</Text>
-              </TouchableOpacity>
-            </View>
-
-          </View>
-          <View style={styles.card}>
-            <View style={{
-              flex: 1,
-            }}>
-              <Text style={styles.name}>Nome do produto</Text>
-              <Text style={styles.priceProduct}>R$ 00,00</Text>
-            </View>
-            <View>
-              <TouchableOpacity
-                style={styles.button}
-              >
-                <Text style={styles.buttonText}>+</Text>
-              </TouchableOpacity>
-            </View>
-
-          </View>
-
         </ScrollView>
+      </View>
+      <View style={{
+        padding: 10,
+      }}>
+        <TouchableOpacity
+          style={styles.buttonEndRequest}
+          onPress={() => navigation.navigate('request')}
+        >
+          <Text style={styles.buttonTextEnd}>Finalizar pedido</Text>
+        </TouchableOpacity>
       </View>
     </>
   );
@@ -321,6 +230,14 @@ const styles = StyleSheet.create({
     width: 60,
     borderRadius: 10,
   },
+  buttonEndRequest: {
+    marginBottom: 10,
+    height: 50,
+    alignItems: "center",
+    justifyContent: 'center',
+    backgroundColor: "#A60303",
+    borderRadius: 10,
+  },
   buttonEnd: {
     marginTop: 10,
     marginBottom: 10,
@@ -343,6 +260,10 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 25,
     color: "#A60303"
+  },
+  buttonTextEnd: {
+    fontSize: 22,
+    color: "white"
   },
   buttonTextModals: {
     fontSize: 15,

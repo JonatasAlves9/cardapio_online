@@ -55,8 +55,6 @@ export default function home({ navigation }) {
                     <Text style={styles.buttonText}>{item.number}</Text>
                   </TouchableOpacity>
                 </View>
-
-
               );
             }}
           />
