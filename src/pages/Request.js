@@ -88,6 +88,7 @@ export default function request({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonEndRequest}
+          onPress={() => navigation.navigate("cancel")}
         >
           <Text style={styles.buttonTextEnd}>Finalizar pedido</Text>
         </TouchableOpacity>

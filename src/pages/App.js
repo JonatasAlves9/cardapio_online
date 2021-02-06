@@ -5,6 +5,7 @@ import Login from '../pages/Login';
 import Home from '../pages/Home';
 import Table from './Table';
 import Request from './Request';
+import Cancel from './CancelRequest';
 
 const Stack = createStackNavigator(
 
@@ -19,6 +20,7 @@ export default function App() {
         <Stack.Screen name="home" component={Home} options={{ headerShown: false }}/>
         <Stack.Screen name="table" component={Table} options={{ headerShown: false }}/>
         <Stack.Screen name="request" component={Request} options={{ headerShown: false }}/>
+        <Stack.Screen name="cancel" component={Cancel} options={{ headerShown: false }}/>
         {/* <Stack.Screen options={{ headerShown: false }} name="splash" component={splash} />
         <Stack.Screen options={{ headerShown: false }} name="Info1" component={Info1} /> */}
       </Stack.Navigator>

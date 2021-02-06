@@ -76,14 +76,14 @@ export default function table({ navigation }) {
               style={styles.buttonEnd}
               onPress={toggleModal}
             >
-              <Text style={styles.buttonTextModals}>Finalizar pedido</Text>
+              <Text style={styles.buttonTextModals}>Adicionar produto</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.buttonCancel}
               onPress={toggleModal}
             >
-              <Text style={styles.buttonTextModals}>Cancelar pedido</Text>
+              <Text style={styles.buttonTextModals}>Cancelar</Text>
             </TouchableOpacity>
           </View>
         </View>
