@@ -83,14 +83,16 @@ export default function request({ navigation }) {
       }}>
         <TouchableOpacity
           style={styles.buttonEndRequest}
+          onPress={() => navigation.navigate("table")}
         >
           <Text style={styles.buttonTextEnd}>Adicionar mais produtos</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonEndRequest}
-          onPress={() => navigation.navigate("cancel")}
+          onPress={() => navigation.navigate("endRequest")}
         >
           <Text style={styles.buttonTextEnd}>Finalizar pedido</Text>
+          
         </TouchableOpacity>
       </View>
     </>
